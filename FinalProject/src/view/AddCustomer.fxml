@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="376.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomer">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="264.0" prefWidth="235.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="128.0" text="Add Customer">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Label>
+             <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="181.0" prefWidth="206.0">
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                 <children>
+                     <Label text="ID" />
+                     <Label text="Name" GridPane.rowIndex="1" />
+                     <Label text="Address" GridPane.rowIndex="2" />
+                     <Label text="Postal Code" GridPane.rowIndex="3" />
+                     <Label text="Phone Number" GridPane.rowIndex="4" />
+                     <TextField fx:id="customerIDTxt" disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                     <TextField fx:id="customerNameTxt" maxWidth="-Infinity" prefHeight="26.0" prefWidth="106.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     <TextField fx:id="customerAddressTxt" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                     <TextField fx:id="customerPostalTxt" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                     <TextField fx:id="customerPhoneTxt" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <Label prefHeight="17.0" prefWidth="90.0" text="Division ID" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <TextField fx:id="customerDivIDTxt" disable="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                 </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+             </GridPane>
+         </children>
+      </VBox>
+      <VBox layoutX="241.0" layoutY="-1.0" prefHeight="400.0" prefWidth="357.0" spacing="10.0">
+         <HBox alignment="CENTER" prefHeight="54.0" prefWidth="358.0" spacing="50.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="25.0" prefWidth="123.0" text="Country" />
+            </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </HBox>
+       <TableView fx:id="countryTableView" layoutX="6.0" layoutY="54.0" prefHeight="126.0" prefWidth="358.0">
+           <columns>
+               <TableColumn fx:id="countryIDCol" prefWidth="83.0" text="Country ID" />
+               <TableColumn fx:id="countryNameCol" prefWidth="208.0" text="Country Name" />
+           </columns>
+       </TableView>
+         <HBox alignment="CENTER" prefHeight="45.0" prefWidth="358.0" spacing="30.0">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <children>
+               <Label text="First Level Division" />
+               <Button mnemonicParsing="false" onAction="#onActionFindDivision" text="Find" />
+            </children>
+            <padding>
+               <Insets left="75.0" />
+            </padding>
+         </HBox>
+         <TableView fx:id="divisionTableView" layoutX="10.0" layoutY="10.0" prefHeight="121.0" prefWidth="378.0">
+            <columns>
+               <TableColumn fx:id="DivisionIDCol" prefWidth="75.0" text="Division ID" />
+               <TableColumn fx:id="StateCol" prefWidth="75.0" text="State" />
+               <TableColumn fx:id="CountryIDCol" prefWidth="118.40003967285156" text="Country ID" />
+            </columns>
+         </TableView>
+         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#onActionAddDivision" text="Add">
+                  <HBox.margin>
+                     <Insets right="50.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+         </HBox>
+       </VBox>
+      <GridPane layoutX="17.0" layoutY="275.0" prefHeight="72.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionSaveCustomer" prefHeight="38.0" prefWidth="70.0" text="Save" />
+            <Button mnemonicParsing="false" onAction="#onActionCancelProduct" prefHeight="39.0" prefWidth="75.0" text="Cancel" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

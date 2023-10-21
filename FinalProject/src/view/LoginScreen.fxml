@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreen">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.6842105263157895" orientation="VERTICAL" prefHeight="243.0" prefWidth="446.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" layoutX="220.0" layoutY="14.0" prefHeight="31.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="usernameTxt" onAction="#onActionSearchUsername" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="220.0" layoutY="66.0" prefHeight="31.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="passwordTxt" onAction="#onActionSearchPassword" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="154.0" layoutY="118.0" prefHeight="39.0" prefWidth="133.0">
+                     <children>
+                        <Label fx:id="zoneIdLabel" prefHeight="28.0" prefWidth="105.0" text="ZoneID goes here" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="60.0" layoutY="120.0" prefHeight="17.0" prefWidth="58.0" />
+                  <Label fx:id="userNameLabel" layoutX="118.0" layoutY="17.0" prefHeight="17.0" prefWidth="102.0" text="Username" />
+                  <Label fx:id="passwordLabel" layoutX="118.0" layoutY="73.0" prefHeight="17.0" prefWidth="102.0" text="Password" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="exitButtonLabel" layoutX="297.0" layoutY="24.0" mnemonicParsing="false" onAction="#onActionExitLogin" prefHeight="25.0" prefWidth="76.0" text="EXIT" />
+                  <Button fx:id="loginButtonLabel" layoutX="89.0" layoutY="24.0" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="25.0" prefWidth="91.0" text="Login" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>
