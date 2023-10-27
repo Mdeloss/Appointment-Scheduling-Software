@@ -1,9 +1,9 @@
-Title: Customer and Appointment Finder
+Title: Appointment Scheduling Software
 
 Purpose of the application is to provide a list of customers and appointments for a business operating in EST. The appointment list can be view depending on 
 different criteria as well. This application actively reads and write to the company database.
 
-•  Mariano De Los Santos, mdelo17@wgu.edu, version 4.4, 10/06/2022
+•  Mariano De Los Santos
 
 •  IntelliJ Community 2021.1.3, Java SE 17.0.1, JavaFX-SDK-17.0.1
 
